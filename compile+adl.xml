@@ -1,0 +1,30 @@
+<project name="Flash Compile" default="ADL" basedir="./">
+
+	<property name="compile.jsfl" value="P:\Lab_AIR\2013\07_29_ADT\compile.jsfl"/>
+    <property name="flash" value="C:\Program Files (x86)\Adobe\Adobe Flash CS6\Flash.exe"/>
+	
+	<property name="SDK_HOME" value="S:\adobe\flex_SDK\flex_sdk_4.6.0.23201B"/> 
+	<property name="ADL" value="${SDK_HOME}/bin/adl.exe"/> 
+	<property name="ADT.JAR" value="${SDK_HOME}/lib/adt.jar"/>
+
+	<property name="APP_NAME" value="main"/> 
+	<property name="APP_ROOT" value="."/> 
+	<property name="APP_DESCRIPTOR" value="${APP_ROOT}/${APP_NAME}-app.xml"/> 
+	<property name="AIR_NAME" value="${APP_NAME}.air"/> 
+	<property name="STORETYPE" value="pkcs12"/> 
+	<property name="KEYSTORE" value="main.p12"/>
+	
+	<!-- AIR Debug Launcher (ADL) 不需要先行封裝和安裝應用程式的情況下，直接執行應用程式 -->
+	<target name="ADL" depends="compile"> 
+		<exec executable="${ADL}"> 
+			<arg value="${APP_DESCRIPTOR}"/> 
+		</exec>  
+	</target>
+	
+	<target name="compile">
+        <exec executable="${flash}">
+            <arg line="'${compile.jsfl}'" />
+        </exec>
+    </target>
+	
+</project>

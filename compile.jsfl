@@ -1,0 +1,1 @@
+﻿fl.outputPanel.clear();var doc = fl.openDocument("file:///P|/Lab_AIR/2013/07_29_ADT/main/main.xfl");doc.publish();fl.closeDocument(fl.documents[0], false); // close fla without saving

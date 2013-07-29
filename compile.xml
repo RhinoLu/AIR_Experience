@@ -1,0 +1,12 @@
+<project name="Flash Compile" default="compile" basedir="./">
+
+	<property name="compile.jsfl" value="P:\Lab_AIR\2013\07_29_ADT\compile.jsfl"/>
+    <property name="flash" value="C:\Program Files (x86)\Adobe\Adobe Flash CS6\Flash.exe"/>
+
+	<target name="compile">
+        <exec executable="${flash}">
+            <arg line="'${compile.jsfl}'" />
+        </exec>
+    </target>
+	
+</project>

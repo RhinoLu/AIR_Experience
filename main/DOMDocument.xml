@@ -1,0 +1,68 @@
+<DOMDocument xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" frameRate="30" currentTimeline="1" xflVersion="2.2" creatorInfo="Adobe Flash Professional CS6" platform="Windows" versionInfo="Saved by Adobe Flash Windows 12.0 build 537" majorVersion="12" buildNumber="537" pixelSnap="true" previewMode="full" nextSceneIdentifier="2" playOptionsPlayLoop="false" playOptionsPlayPages="false" playOptionsPlayFrameActions="false">
+     <timelines>
+          <DOMTimeline name="Scene 1">
+               <layers>
+                    <DOMLayer name="Layer 1" color="#4FFF4F" current="true" isSelected="true">
+                         <frames>
+                              <DOMFrame index="0" keyMode="9728">
+                                   <Actionscript>
+                                        <script><![CDATA[stage.addEventListener(KeyboardEvent.KEY_DOWN, onMyKeyDown);
+
+function onMyKeyDown(e:KeyboardEvent):void
+{
+	//trace("keyCode : " + e.keyCode);
+	if (e.keyCode == 49)
+	{
+		// 1
+		loadSWF("child1.swf");
+	}
+	else if (e.keyCode == 50)
+	{
+		// B
+		loadSWF("child2.swf");
+	}
+	else if (e.keyCode == 27)
+	{
+		// ESC
+		if (Capabilities.playerType == "Desktop")
+		{
+			NativeApplication.nativeApplication.exit();
+		}
+	}
+}
+
+function loadSWF(file:String):void
+{
+	removeChildren();
+	var _loader:Loader = new Loader();
+	var _request:URLRequest = new URLRequest(file);
+	_loader.load(_request);
+	addChild(_loader);
+}]]></script>
+                                   </Actionscript>
+                                   <elements/>
+                              </DOMFrame>
+                         </frames>
+                    </DOMLayer>
+               </layers>
+          </DOMTimeline>
+     </timelines>
+     <persistentData>
+          <PD n="flash.fla.filepath" v="P:/Lab_AIR/2013/07_29_ADT/main/main.xfl"/>
+          <PD n="swf.folder.path" v="P:/Lab_AIR/2013/07_29_ADT/"/>
+          <PD n="com.air.artemis.pubipa" v="false"/>
+          <PD n="com.air.artemis.pubcaptive" v="false"/>
+          <PD n="com.air.artemis.pubair" v="true"/>
+          <PD n="flash.swf.basename" v="main"/>
+          <PD n="com.air.sdk.path"/>
+          <PD n="com.air.artemis.pubexe" v="false"/>
+          <PD n="com.air.artemis.airdest" v="main.air"/>
+     </persistentData>
+     <PrinterSettings/>
+     <publishHistory>
+          <PublishItem publishSize="901" publishTime="1375062537"/>
+          <PublishItem publishSize="86" publishTime="1375062525"/>
+          <PublishItem publishSize="53" publishTime="1375056619"/>
+          <PublishItem publishSize="86" publishTime="1375056608"/>
+     </publishHistory>
+</DOMDocument>
