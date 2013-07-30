@@ -1,4 +1,4 @@
-Running compile on undefined files at: file:///P|/Lab_AIR/13_07_31_%e5%90%8c%e6%a5%ad%e6%9c%83/repo/AIR_Experience/
+Running compile on undefined files at: file:///C|/Lab_AIR/13_07_31_%e5%88%86%e4%ba%ab/AIR_Experience/
 
 ---------------------------------------------------------------------------
 Compiling child1/child1.xfl

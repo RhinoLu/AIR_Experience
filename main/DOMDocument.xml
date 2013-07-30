@@ -50,12 +50,12 @@ function loadSWF(file:String):void
      <persistentData>
           <PD n="flash.fla.filepath" v="P:/Lab_AIR/2013/07_29_ADT/main/main.xfl"/>
           <PD n="swf.folder.path" v="P:/Lab_AIR/2013/07_29_ADT/"/>
-          <PD n="com.air.artemis.pubipa" v="false"/>
           <PD n="com.air.artemis.pubcaptive" v="false"/>
+          <PD n="com.air.artemis.pubipa" v="false"/>
           <PD n="com.air.artemis.pubair" v="true"/>
           <PD n="flash.swf.basename" v="main"/>
-          <PD n="com.air.sdk.path"/>
           <PD n="com.air.artemis.pubexe" v="false"/>
+          <PD n="com.air.sdk.path"/>
           <PD n="com.air.artemis.airdest" v="main.air"/>
      </persistentData>
      <PrinterSettings/>
