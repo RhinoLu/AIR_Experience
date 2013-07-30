@@ -1,0 +1,3 @@
+child1/child1.xfl	child1.swf
+child2/child2.xfl	child2.swf
+main/main.xfl	main.swf
