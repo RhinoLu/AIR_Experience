@@ -48,10 +48,13 @@ function loadSWF(file:String):void
           </DOMTimeline>
      </timelines>
      <persistentData>
-          <PD n="flash.fla.filepath" v="P:/Lab_AIR/2013/07_29_ADT/main/main.xfl"/>
-          <PD n="swf.folder.path" v="P:/Lab_AIR/2013/07_29_ADT/"/>
+          <PD n="flash.fla.filepath" v="P:/Lab_AIR/13_07_31_同業會/repo/AIR_Experience/main/main.xfl"/>
+          <PD n="swf.folder.path" v="P:/Lab_AIR/13_07_31_同業會/repo/AIR_Experience/"/>
           <PD n="com.air.artemis.pubcaptive" v="false"/>
           <PD n="com.air.artemis.pubipa" v="false"/>
+          <PD n="com.air.artemis.included.count" v="2"/>
+          <PD n="com.air.artemis.included.item1" v="child2.swf"/>
+          <PD n="com.air.artemis.included.item0" v="child1.swf"/>
           <PD n="com.air.artemis.pubair" v="true"/>
           <PD n="flash.swf.basename" v="main"/>
           <PD n="com.air.artemis.pubexe" v="false"/>
