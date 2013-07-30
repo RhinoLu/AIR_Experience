@@ -1,0 +1,98 @@
+<DOMDocument xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" frameRate="30" currentTimeline="1" xflVersion="2.2" creatorInfo="Adobe Flash Professional CS6" platform="Windows" versionInfo="Saved by Adobe Flash Windows 12.0 build 537" majorVersion="12" buildNumber="537" pixelSnap="true" previewMode="full" nextSceneIdentifier="2" playOptionsPlayLoop="false" playOptionsPlayPages="false" playOptionsPlayFrameActions="false">
+     <timelines>
+          <DOMTimeline name="Scene 1">
+               <layers>
+                    <DOMLayer name="as" color="#4FFF4F" current="true" isSelected="true" autoNamed="false">
+                         <frames>
+                              <DOMFrame index="0" keyMode="9728">
+                                   <Actionscript>
+                                        <script><![CDATA[import air.net.SocketMonitor;
+
+var socketMonitor:SocketMonitor;
+
+function monitorServer():void
+{
+	socketMonitor = new SocketMonitor("127.0.0.1", 9527);
+	socketMonitor.pollInterval = 5 * 1000;// 每 5 秒檢查
+	socketMonitor.addEventListener(StatusEvent.STATUS, socketStatusChange);
+	socketMonitor.start();
+}
+
+function socketStatusChange(e:StatusEvent):void
+{
+	trace("Status change. Current status: " + socketMonitor.available);
+	if (socketMonitor.available)
+	{
+		socketMonitor.removeEventListener(StatusEvent.STATUS, socketStatusChange);
+		socketMonitor.stop();
+		txt_info.text = "OK";
+	}
+	else
+	{
+		txt_info.text = "NOT OK";
+	}
+}
+
+txt_info.text = "Waiting...";
+monitorServer();]]></script>
+                                   </Actionscript>
+                                   <elements/>
+                              </DOMFrame>
+                         </frames>
+                    </DOMLayer>
+                    <DOMLayer name="txt_info" color="#9933CC" autoNamed="false">
+                         <frames>
+                              <DOMFrame index="0" keyMode="9728">
+                                   <elements>
+                                        <DOMDynamicText name="txt_info" fontRenderingMode="device" width="459" height="82.25" isSelectable="false" border="true">
+                                             <matrix>
+                                                  <Matrix tx="44" ty="131.75"/>
+                                             </matrix>
+                                             <textRuns>
+                                                  <DOMTextRun>
+                                                       <characters></characters>
+                                                       <textAttrs>
+                                                            <DOMTextAttrs alignment="center" aliasText="false" size="30" bitmapSize="600" face="MicrosoftJhengHeiRegular"/>
+                                                       </textAttrs>
+                                                  </DOMTextRun>
+                                             </textRuns>
+                                        </DOMDynamicText>
+                                   </elements>
+                              </DOMFrame>
+                         </frames>
+                    </DOMLayer>
+               </layers>
+          </DOMTimeline>
+     </timelines>
+     <persistentData>
+          <PD n="TestMovieChecked" v="ADLDesktop"/>
+          <PD n="flash.fla.filepath" v="P:/Lab_AIR/13_07_31_同業會/repo/AIR_Experience/socket_monitor/monitor/monitor.xfl"/>
+          <PD n="swf.folder.path" v="P:/Lab_AIR/13_07_31_同業會/repo/AIR_Experience/socket_monitor/"/>
+          <PD n="com.air.artemis.pubipa" v="false"/>
+          <PD n="com.air.artemis.pubcaptive" v="false"/>
+          <PD n="com.air.artemis.pubair" v="true"/>
+          <PD n="flash.swf.basename" v="monitor"/>
+          <PD n="com.air.artemis.pubexe" v="false"/>
+          <PD n="com.air.sdk.path"/>
+          <PD n="com.air.artemis.airdest" v="monitor.air"/>
+     </persistentData>
+     <PrinterSettings/>
+     <publishHistory>
+          <PublishItem publishSize="3765" publishTime="1375200829"/>
+          <PublishItem publishSize="3766" publishTime="1375200816"/>
+          <PublishItem publishSize="3765" publishTime="1375200804"/>
+          <PublishItem publishSize="3773" publishTime="1375200772"/>
+          <PublishItem publishSize="3773" publishTime="1375200742"/>
+          <PublishItem publishSize="2648" publishTime="1375200628"/>
+          <PublishItem publishSize="3761" publishTime="1375200509"/>
+          <PublishItem publishSize="3751" publishTime="1375200452"/>
+          <PublishItem publishSize="3714" publishTime="1375200425"/>
+          <PublishItem publishSize="3722" publishTime="1375200401"/>
+          <PublishItem publishSize="3713" publishTime="1375200374"/>
+          <PublishItem publishSize="3698" publishTime="1375200356"/>
+          <PublishItem publishSize="3663" publishTime="1375200297"/>
+          <PublishItem publishSize="3663" publishTime="1375200264"/>
+          <PublishItem publishSize="190" publishTime="1375200242"/>
+          <PublishItem publishSize="190" publishTime="1375200056"/>
+     </publishHistory>
+</DOMDocument>
